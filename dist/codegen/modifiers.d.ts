@@ -1,0 +1,2 @@
+import { Modifier } from '../types/modifiers';
+export declare const modifier: <T extends "BigInt" | "String" | "Float" | "Json" | "Decimal" | "Bytes" | "DateTime" | "Boolean" | "Int" | "@@id" | "@@unique" | "@@index" | "@@ignore" | "@@map" | "@@fulltext" | "OneToMany" | "OneToOne" | "ManyToOne" | keyof import("../types/types").Enums | "Comment" | "AstComment" | "Raw" | "Unsupported">(type: T, modifier: Modifier<T, keyof import("../types/types").TypeData[T]>) => string;

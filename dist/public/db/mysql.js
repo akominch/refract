@@ -1,0 +1,31 @@
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_1 = require("./utils");
+const _ = (0, utils_1.db)('mysql');
+exports.default = {
+    Char: (value) => _.String('Char', value),
+    VarChar: (value) => _.String('VarChar', value),
+    TinyInt: (value) => _.Boolean('TinyInt', value),
+    UnsignedBigInt: _.BigInt('UnsignedBigInt'),
+    BigInt: _.BigInt('BigInt'),
+    SmallInt: _.BigInt('SmallInt'),
+    UnsignedSmallInt: _.Int('UnsignedSmallInt'),
+    MediumInt: _.Int('MediumInt'),
+    UnsignedMediumInt: _.Int('UnsignedMediumInt'),
+    Year: _.Int('Year'),
+    Float: _.Float('Float'),
+    Double: _.Float('Double'),
+    VarBinary: _.Bytes('VarBinary'),
+    LongBlob: _.Bytes('LongBlog'),
+    TinyBlob: _.Bytes('TinyBlob'),
+    MediumBlob: _.Bytes('MediumBlob'),
+    Blob: _.Bytes('Blob'),
+    Binary: _.Bytes('Binary'),
+    Bit: (value) => _.Bytes('Bit', value),
+    Date: (value) => _.DateTime('Date', value),
+    DateTime: (value) => _.DateTime('DateTime', value),
+    Timestamp: (value) => _.DateTime('Timestamp', value),
+    Time: (value) => _.DateTime('Time', value),
+    Json: _.Json('Json'),
+    Text: _.String('Text'),
+    Decimal: (...coords) => _.Decimal('Decimal', coords),
+};

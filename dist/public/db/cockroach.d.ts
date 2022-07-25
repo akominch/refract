@@ -1,0 +1,24 @@
+declare const _default: {
+    Int8: import("./utils").DbModifier<"BigInt", "cockroachdb", "@db.cockroachdb.Int8", true>;
+    Bool: import("./utils").DbModifier<"Boolean", "cockroachdb", "@db.cockroachdb.Bool", true>;
+    TimeStamp: (precision?: number) => import("./utils").DbModifier<"DateTime", "cockroachdb", "@db.cockroachdb.Timestamp", number>;
+    Timestamptz: (precision?: number) => import("./utils").DbModifier<"DateTime", "cockroachdb", "@db.cockroachdb.Timestamptz", number>;
+    Time: (precision?: number) => import("./utils").DbModifier<"DateTime", "cockroachdb", "@db.cockroachdb.Time", number>;
+    Timetz: (precision?: number) => import("./utils").DbModifier<"DateTime", "cockroachdb", "@db.cockroachdb.Timetz", number>;
+    Decimal: (precision: number, scale: number) => import("./utils").DbModifier<"Decimal", "cockroachdb", "@db.cockroachdb.Decimal", number[]>;
+    Float4: import("./utils").DbModifier<"Float", "cockroachdb", "@db.cockroachdb.Float4", true>;
+    Float8: import("./utils").DbModifier<"Float", "cockroachdb", "@db.cockroachdb.Float8", true>;
+    Int2: import("./utils").DbModifier<"Int", "cockroachdb", "@db.cockroachdb.Int2", true>;
+    Int4: import("./utils").DbModifier<"Int", "cockroachdb", "@db.cockroachdb.Int4", true>;
+    Char: (length?: number) => import("./utils").DbModifier<"String", "cockroachdb", "@db.cockroachdb.Char", number>;
+    CatalogSingleChar: import("./utils").DbModifier<"String", "cockroachdb", "@db.cockroachdb.CatalogSingleChar", true>;
+    String: import("./utils").DbModifier<"String", "cockroachdb", "@db.cockroachdb.String", true>;
+    Date: import("./utils").DbModifier<"DateTime", "cockroachdb", "@db.cockroachdb.Date", true>;
+    Inet: import("./utils").DbModifier<"String", "cockroachdb", "@db.cockroachdb.Inet", true>;
+    Bit: (length?: number) => import("./utils").DbModifier<"String", "cockroachdb", "@db.cockroachdb.Bit", number>;
+    VarBit: (length?: number) => import("./utils").DbModifier<"String", "cockroachdb", "@db.cockroachdb.VarBit", number>;
+    Oid: import("./utils").DbModifier<"Int", "cockroachdb", "@db.cockroachdb.Oid", true>;
+    Uuid: import("./utils").DbModifier<"String", "cockroachdb", "@db.cockroachdb.Uuid", true>;
+    JsonB: import("./utils").DbModifier<"Json", "cockroachdb", "@db.cockroachdb.JsonB", true>;
+};
+export default _default;

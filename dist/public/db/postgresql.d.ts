@@ -1,0 +1,28 @@
+declare const _default: {
+    BigInt: import("./utils").DbModifier<"BigInt", "postgresql", "@db.postgresql.BigInt", true>;
+    Boolean: import("./utils").DbModifier<"Boolean", "postgresql", "@db.postgresql.Boolean", true>;
+    Timestamp: (precision?: number) => import("./utils").DbModifier<"DateTime", "postgresql", "@db.postgresql.Timestamp", number>;
+    Timestamptz: (precision?: number) => import("./utils").DbModifier<"DateTime", "postgresql", "@db.postgresql.Timestamptz", number>;
+    Time: (precision?: number) => import("./utils").DbModifier<"DateTime", "postgresql", "@db.postgresql.Time", number>;
+    Timetz: (precision?: number) => import("./utils").DbModifier<"DateTime", "postgresql", "@db.postgresql.Timetz", number>;
+    Decimal: (precision?: number, scale?: number) => import("./utils").DbModifier<"Decimal", "postgresql", "@db.postgresql.Decimal", number[]>;
+    Real: import("./utils").DbModifier<"Float", "postgresql", "@db.postgresql.Real", true>;
+    DoublePrecision: import("./utils").DbModifier<"Float", "postgresql", "@db.postgresql.DoublePrecision", true>;
+    SmallInt: import("./utils").DbModifier<"Int", "postgresql", "@db.postgresql.SmallInt", true>;
+    Char: (length?: number) => import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.Char", number>;
+    VarChar: (length?: number) => import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.VarChar", number>;
+    Money: import("./utils").DbModifier<"Decimal", "postgresql", "@db.postgresql.Money", true>;
+    Text: import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.Text", true>;
+    Date: import("./utils").DbModifier<"DateTime", "postgresql", "@db.postgresql.Date", true>;
+    Inet: import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.Inet", true>;
+    Bit: (length?: number) => import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.Bit", number>;
+    VarBit: (length?: number) => import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.VarBit", number>;
+    Oid: import("./utils").DbModifier<"Int", "postgresql", "@db.postgresql.Oid", true>;
+    Uuid: import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.Uuid", true>;
+    Json: import("./utils").DbModifier<"Json", "postgresql", "@db.postgresql.Json", true>;
+    JsonB: import("./utils").DbModifier<"Json", "postgresql", "@db.postgresql.JsonB", true>;
+    ByteA: import("./utils").DbModifier<"Bytes", "postgresql", "@db.postgresql.ByteA", true>;
+    Xml: import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.Xml", true>;
+    Citext: import("./utils").DbModifier<"String", "postgresql", "@db.postgresql.Citext", true>;
+};
+export default _default;

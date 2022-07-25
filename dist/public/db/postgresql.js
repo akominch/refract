@@ -1,0 +1,30 @@
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_1 = require("./utils");
+const _ = (0, utils_1.db)('postgresql');
+exports.default = {
+    BigInt: _.BigInt('BigInt'),
+    Boolean: _.Boolean('Boolean'),
+    Timestamp: (precision) => _.DateTime('Timestamp', precision),
+    Timestamptz: (precision) => _.DateTime('Timestamptz', precision),
+    Time: (precision) => _.DateTime('Time', precision),
+    Timetz: (precision) => _.DateTime('Timetz', precision),
+    Decimal: (precision, scale) => _.Decimal('Decimal', [precision, scale]),
+    Real: _.Float('Real'),
+    DoublePrecision: _.Float('DoublePrecision'),
+    SmallInt: _.Int('SmallInt'),
+    Char: (length) => _.String('Char', length),
+    VarChar: (length) => _.String('VarChar', length),
+    Money: _.Decimal('Money'),
+    Text: _.String('Text'),
+    Date: _.DateTime('Date'),
+    Inet: _.String('Inet'),
+    Bit: (length) => _.String('Bit', length),
+    VarBit: (length) => _.String('VarBit', length),
+    Oid: _.Int('Oid'),
+    Uuid: _.String('Uuid'),
+    Json: _.Json('Json'),
+    JsonB: _.Json('JsonB'),
+    ByteA: _.Bytes('ByteA'),
+    Xml: _.String('Xml'),
+    Citext: _.String('Citext'),
+};
